@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx'
 import 'antd/dist/reset.css';
-import { AuthProvider } from './contexts/AuthContext.js';
-import { NotificationProvider } from './contexts/NotificationContext.js';
+import { AuthProvider } from './contexts/AuthContext.jsx';
+import { NotificationProvider } from './contexts/NotificationContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

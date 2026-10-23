@@ -1,4 +1,5 @@
-const History = require('../models/historyModel');
+const mongoose = require('mongoose');
+const History = mongoose.model('History'); // <-- ¡Listo! Esto resuelve el error del TypeError y activa el constructor
 
 // Obtener todas las citas
 exports.getAllHistories = async (req, res) => {

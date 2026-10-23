@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+require('./models/historyModel');
+
 const authRouter = require('./routes/authRoute');
 const productRoutes = require('./routes/productRoutes');
 const userRoutes = require('./routes/userRoutes');

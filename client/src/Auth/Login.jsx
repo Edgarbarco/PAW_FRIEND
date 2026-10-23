@@ -58,13 +58,27 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div
+    style={{
+      minHeight: "100vh",
+      paddingTop: 120,
+      paddingBottom: 40,
+      background: "linear-gradient(120deg, #1d2e17 50%, #292614 77%)",
+    }}
+    >
       <Navbar />
-      <Card className="form-container" style={{ marginTop: 120 }}>
+      <Card className="form-container" style={{ marginTop: 120,
+          maxWidth: 950, 
+          marginInline: "auto", 
+          borderRadius: 20, 
+          boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+          overflow: "hidden",
+          border: "none",
+          background: "#1e2c1e" }}>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
           <div style={{ flex: 1 }}>
             <img
-              src="https://i.pinimg.com/736x/ef/97/90/ef9790a063fd9d4e72cb3b59aa0a3a6c.jpg"
+              src="https://images.unsplash.com/photo-1602979677071-1781b7f40023?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
               alt="Inicio de Sesión"
               className="form-img-vertical"
             />
@@ -139,8 +153,9 @@ const Login = () => {
           </div>
         </div>
       </Card>
-    </>
+    </div>
   );
 };
 
 export default Login;
+

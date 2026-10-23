@@ -51,7 +51,7 @@ const Home = () => {
     {/* Navbar fija y full width */}
     <Header
       style={{
-        background: "#fff",
+        background: "linear-gradient(120deg, #2e2c20 50%, #1f1709 77%)",
         borderBottom: "1px solid #eee",
         position: "fixed",
         top: 0,
@@ -59,7 +59,7 @@ const Home = () => {
         zIndex: 100,
         padding: 0,
         width: "100%",
-        boxShadow: "0 2px 8px #e6eaf1",
+        boxShadow: "0 2px 8px #2e2c20",
         height: NAVBAR_HEIGHT,
         display: "flex",
         alignItems: "center",
@@ -69,11 +69,11 @@ const Home = () => {
         <Col>
           <Space align="center">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+              src="https://i.pinimg.com/736x/e9/8a/3d/e98a3d945cdaf4b4894289593ebe6668.jpg"
               alt="logo"
-              style={{ width: 36, height: 36 }}
+              style={{ width: 56, height: 56, mixBlendMode: 'multiply', }}
             />
-            <Typography.Title level={4} style={{ margin: 0, color: "#ffd666", fontSize: 22, letterSpacing: 1 }}>
+            <Typography.Title level={4} style={{ margin: 0, color: "#211f10", fontSize: 22, letterSpacing: 1 }}>
               PawFriends
             </Typography.Title>
           </Space>
@@ -93,7 +93,7 @@ const Home = () => {
       style={{
         minHeight: "80vh",
         padding: "0 0 48px 0",
-        background: "#f7f9fb",
+        background: "linear-gradient(120deg, #1d2e17 50%, #292614 10%)",
         marginTop: NAVBAR_HEIGHT,
         display: "flex",
         flexDirection: "column",
@@ -104,7 +104,7 @@ const Home = () => {
       <div
         style={{
           width: "100%",
-          background: "linear-gradient(120deg, #e0f7fa 0%, #fff 100%)",
+          background: "linear-gradient(120deg, #1d2e17 50%, #292614 77%)",
           padding: "80px 0 40px 0",
           minHeight: 420,
           display: "flex",
@@ -114,23 +114,23 @@ const Home = () => {
       >
         <Row
           justify="center"
-          align="middle"
+          align="stretch"
           gutter={[0, 0]}
           style={{
             maxWidth: 1200,
             width: "100%",
             margin: "0 auto",
-            background: "#fff",
+            background: "#3a5c2f",
             borderRadius: 28,
             boxShadow: "0 8px 32px #e6eaf1",
             overflow: "hidden",
           }}
         >
           <Col xs={24} md={12} style={{ padding: "56px 36px" }}>
-            <Typography.Title style={{ color: "#1890ff", marginBottom: 18, fontSize: 32, fontWeight: 700 }}>
+            <Typography.Title style={{ color: "#292614", marginBottom: 18, fontSize: 32, fontWeight: 700 }}>
               Bienvenido a PawFriends
             </Typography.Title>
-            <Typography.Paragraph style={{ fontSize: 18, color: "#444", marginBottom: 32, lineHeight: 1.7 }}>
+            <Typography.Paragraph style={{ fontSize: 18, color: "#fffffff", marginBottom: 32, lineHeight: 1.7 }}>
               Plataforma profesional para la gestión eficiente de tu veterinaria.<br />
               Controla inventario, historial de pacientes y usuarios, todo en un solo lugar con una interfaz moderna y segura.
             </Typography.Paragraph>
@@ -148,38 +148,30 @@ const Home = () => {
             md={12}
             style={{
               display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              minHeight: 350,
-              padding: "56px 0",
-              background: "linear-gradient(135deg, #e6f7ff 0%, #fff 100%)",
+              padding: 0,
+              minHeight: 460,
+              background: "linear-gradient(135deg, ##292614 0%, #0f210a 100%)",
             }}
           >
             <div
               style={{
                 position: "relative",
-                width: 320,
-                height: 320,
-                maxWidth: "90vw",
-                borderRadius: "50%",
+                width: "100%",
+                flex: 1,
                 overflow: "hidden",
-                boxShadow: "0 8px 32px #b3c6e0",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
               }}
             >
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN4HJhnJo07reTM0Lta1HoTollHloqsqRUVw&s"
+                src="https://i.pinimg.com/736x/63/37/02/633702c7cc847064c2f6995f81a86d6b.jpg"
                 alt="Veterinaria"
                 style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
                   width: "100%",
                   height: "100%",
-                  marginTop: "35px",
                   objectFit: "cover",
-                  filter: "brightness(0.92) saturate(1.1)",
-                  transition: "0.3s",
+                  filter: "brightness(0.95) saturate(1.05)",
                 }}
               />
               <div
@@ -189,23 +181,21 @@ const Home = () => {
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  background: "rgba(24,144,255,0.08)",
+                  background: "linear-gradient(135deg, rgba(24,144,255,0.1) 0%, rgba(0,0,0,0.2) 100%)",
                   pointerEvents: "none",
-                  borderRadius: "50%",
-                  border: "3px solid #1890ff33",
                 }}
               />
               <HeartOutlined
                 style={{
                   position: "absolute",
-                  bottom: 18,
+                  bottom: 1800,
                   right: 18,
-                  fontSize: 34,
-                  color: "#ff7875cc",
-                  background: "#fff",
-                  borderRadius: "50%",
-                  padding: 8,
-                  boxShadow: "0 2px 8px #eee",
+                  fontSize: 28,
+                  color: "#ff4d4f",
+                  background: "#292614",
+                  borderRadius: "100%",
+                  padding: 10,
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
                 }}
               />
             </div>
@@ -223,9 +213,9 @@ const Home = () => {
             }
             bordered={false}
             style={{
-              background: "#fff",
+              background: "#203621",
               borderRadius: 22,
-              boxShadow: "0 2px 12px #e6eaf1",
+              boxShadow: "0 2px 12px #19381c",
               marginBottom: 72,
               padding: "36px 0",
             }}
@@ -233,17 +223,17 @@ const Home = () => {
           >
             <Row gutter={[32, 32]}>
               <Col xs={24} md={12}>
-                <ul style={{ fontSize: 17, color: "#555", paddingLeft: 20, lineHeight: 2.2 }}>
+                <ul style={{ fontSize: 17, color: "#ffffff", paddingLeft: 20, lineHeight: 2.2 }}>
                   <li>
-                    <HeartOutlined style={{ color: "#ff7875" }} /> Gestión de inventario y pacientes fácil de usar.
+                    <HeartOutlined style={{ color: "#fffffff" }} /> Gestión de inventario y pacientes fácil de usar.
                   </li>
                   <li>
-                    <LoginOutlined style={{ color: "#1890ff" }} /> Acceso seguro para tu equipo.
+                    <LoginOutlined style={{ color: "#fffffff" }} /> Acceso seguro para tu equipo.
                   </li>
                 </ul>
               </Col>
               <Col xs={24} md={12}>
-                <ul style={{ fontSize: 17, color: "#555", paddingLeft: 20, lineHeight: 2.2 }}>
+                <ul style={{ fontSize: 17, color: "#ffffff", paddingLeft: 20, lineHeight: 2.2 }}>
                   <li>
                     <AppstoreOutlined style={{ color: "#52c41a" }} /> Historial clínico digitalizado.
                   </li>
@@ -262,7 +252,7 @@ const Home = () => {
             <Card
               bordered={false}
               style={{
-                background: "#FFFCF2",
+                background: "#324033",
                 borderRadius: 22,
                 textAlign: "center",
                 boxShadow: "0 2px 12px #ffe58f",
@@ -271,7 +261,7 @@ const Home = () => {
               }}
               bodyStyle={{ padding: "36px 28px" }}
             >
-              <Typography.Title level={4} style={{ color: "#faad14", marginBottom: 18, fontSize: 22 }}>
+              <Typography.Title level={4} style={{ color: "ffff", marginBottom: 18, fontSize: 22 }}>
                 Agenda tu cita o contáctanos
               </Typography.Title>
                 <Form
@@ -341,18 +331,18 @@ const Home = () => {
             <Card
               bordered={false}
               style={{
-                background: "#f0f5ff",
+                background: "#324033",
                 borderRadius: 22,
                 textAlign: "center",
-                boxShadow: "0 2px 12px #e6eaf1",
+                boxShadow: "0 2px 12px #fffff",
                 padding: "36px 0",
               }}
               bodyStyle={{ padding: "36px 28px" }}
             >
-              <Typography.Title level={4} style={{ color: "#1890ff", marginBottom: 18, fontSize: 22 }}>
+              <Typography.Title level={4} style={{ color: "#ffffff", marginBottom: 18, fontSize: 22 }}>
                 Sobre Nosotros
               </Typography.Title>
-              <Typography.Paragraph style={{ fontSize: 17, color: "#444", marginBottom: 0 }}>
+              <Typography.Paragraph style={{ fontSize: 17, color: "#fffff", marginBottom: 0 }}>
                 Somos un equipo apasionado por el bienestar animal y la tecnología.<br />
                 Nuestra misión es facilitar la gestión veterinaria y mejorar la experiencia tanto para profesionales como para sus pacientes peludos.
               </Typography.Paragraph>

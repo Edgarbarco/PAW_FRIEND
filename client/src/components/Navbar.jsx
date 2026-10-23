@@ -78,7 +78,7 @@ const Navbar = () => {
   return (
     <div
       style={{
-        background: "#fff",
+        background: "linear-gradient(120deg, #1d2e17 50%, #292614 77%)",
         borderBottom: "1px solid #eee",
         position: "fixed",
         top: 0,
@@ -86,7 +86,7 @@ const Navbar = () => {
         zIndex: 100,
         padding: 0,
         width: "100%",
-        boxShadow: "0 2px 8px #e6eaf1",
+        boxShadow: "0 2px 8px #132c30",
       }}
     >
       <Row justify="space-between" align="middle" style={{ height: 64, padding: "0 32px" }}>
@@ -94,11 +94,11 @@ const Navbar = () => {
           <Space align="center">
             <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
               <img
-                src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+                src="https://i.pinimg.com/736x/e9/8a/3d/e98a3d945cdaf4b4894289593ebe6668.jpg"
                 alt="logo"
-                style={{ width: 36, height: 36 }}
+                style={{ width: 46, height: 46, mixBlendMode: 'multiply', }}
               />
-              <Typography.Title level={3} style={{ margin: 0, color: "#1890ff" }}>
+              <Typography.Title level={3} style={{ margin: 0, color: "#58686b" }}>
                 PawFriends
               </Typography.Title>
             </Link>
@@ -107,7 +107,14 @@ const Navbar = () => {
         <Col>
           <Space align="center">
             {isAuthenticated && <NotificationBell />}
-            <Menu mode="horizontal" items={menuItems} selectable={false} />
+            <Menu mode="horizontal" items={menuItems} selectable={false} 
+            style={{
+              background: 'transparent',    
+              borderBottom: 'none',        
+              color: '#fff',            
+            }}
+            className="custom-dark-menu" 
+          />
           </Space>
         </Col>
       </Row>

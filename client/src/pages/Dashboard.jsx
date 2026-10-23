@@ -67,11 +67,11 @@ const Dashboard = () => {
       <div
         style={{
           height: NAVBAR_HEIGHT,
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 10%)',
+          background: 'linear-gradient(135deg, #854a3d 50%, #963046 10%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '0 20px',
+          padding: '0 00.5px',
           boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
           position: 'fixed',
           top: 0,
@@ -83,22 +83,23 @@ const Dashboard = () => {
         {/* Logo y nombre de la app - IZQUIERDA */}
         <Space align="center" size="large">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+            src="https://i.pinimg.com/736x/e9/8a/3d/e98a3d945cdaf4b4894289593ebe6668.jpg"
             alt="PawFriends"
             style={{ 
-              width: 45, 
-              height: 45,
+              width: 57, 
+              height: 57,
+              mixBlendMode: 'multiply',
               filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))',
             }}
           />
           <Typography.Title 
             level={4} 
             style={{ 
-              margin: 0, 
-              color: '#fff', 
-              fontWeight: 400,
-              letterSpacing: 1,
-              textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
+              margin: 1, 
+              color: '#f2e9e9', 
+              fontWeight: 200,
+              letterSpacing: 5,
+              textShadow: '8px 8px 7px rgba(0,0,0,0.2)',
             }}
           >
             Paw Friends
@@ -109,10 +110,10 @@ const Dashboard = () => {
         <Space
           size="middle"
           style={{
-            background: 'rgba(255,255,255,0.95)',
+            background: 'transparent',
             padding: '8px 25px',
             borderRadius: 30,
-            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            //boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
           }}
         >
           <Avatar
@@ -120,8 +121,8 @@ const Dashboard = () => {
             icon={<UserOutlined />}
             src={userData?.avatar}
             style={{ 
-              backgroundColor: isAdmin ? '#faad14' : 'blue',
-              border: '2px solid #fff',
+              backgroundColor: isAdmin ? '#faad14' : 'gray',
+              border: '2px solid #ab7878',
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
             }}
           />
@@ -131,7 +132,7 @@ const Dashboard = () => {
               strong 
               style={{ 
                 fontSize: 15,
-                color: '#333',
+                color: '#bdcfba',
                 lineHeight: 1.0,
               }}
             >
@@ -140,11 +141,11 @@ const Dashboard = () => {
             
             <Tag 
               icon={isAdmin ? <CrownOutlined /> : <UserAddOutlined />}
-              color={isAdmin ? 'gold' : 'blue'}
+              color={isAdmin ? 'gold' : 'green'}
               style={{ 
-                margin: 0,
+                margin: 1,
                 fontSize: 11,
-                fontWeight: 600,
+                fontWeight: 500,
                 width: 'fit-content',
               }}
             >
@@ -158,7 +159,7 @@ const Dashboard = () => {
             icon={<LogoutOutlined />}
             onClick={handleLogout}
             style={{
-              borderRadius: 50,
+              borderRadius: 5,
               fontWeight: 500,
             }}
           >
@@ -175,7 +176,7 @@ const Dashboard = () => {
             marginLeft: SIDEBAR_WIDTH, 
             flex: 1, 
             padding: 40,  
-            background: '#f0f2f5', 
+            background: '#7ab1e6',
             minHeight: `calc(100vh - ${NAVBAR_HEIGHT}px)`,
             overflowY: 'auto',
           }}

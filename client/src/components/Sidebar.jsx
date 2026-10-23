@@ -118,14 +118,14 @@ const Sidebar = () => {
     <div style={{
       width: SIDEBAR_WIDTH,
       height: `calc(100vh - ${NAVBAR_HEIGHT}px)`,
-      background: '#ffffff',
+      background: '#ffff',
       position: 'fixed',
       left: 0,
       top: NAVBAR_HEIGHT,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      borderRight: '1px solid #f0f0f0',
+      borderRight: '1px solid #ffff',
       overflowY: 'auto', // Permitir scroll si es necesario
       zIndex: 100
     }}>
@@ -135,7 +135,7 @@ const Sidebar = () => {
           selectedKeys={[getSelectedKey()]}
           items={menuItems}
           style={{ 
-            height: '100%', 
+            height: '0%', 
             borderRight: 0,
             padding: '8px 0'
           }}

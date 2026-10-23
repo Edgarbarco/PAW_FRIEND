@@ -31,7 +31,7 @@ const Register = () => {
         ...values,
         role: selectedRole,
       };
-      
+
       await registerUser(formData);
       message.success("Usuario registrado exitosamente");
       form.resetFields();
@@ -44,9 +44,17 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-page">
+    <div className="auth-page" style={{ background: "linear-gradient(135deg, #36351b 5%, #222e19 100%)", minHeight: "100vh", paddingBottom: 40 }}>//nuevo ajuste de color
       <Navbar />
-      <Card className="form-container" style={{ marginTop: 120,minHeight: '100vh' }}>
+      <Card
+        className="form-container"
+        style={{ marginTop: 120, maxWidth: 950, 
+          marginInline: "auto", 
+          borderRadius: 10, 
+          boxShadow: "0 10px 350px rgba(0,0,0,0.1)",
+          overflow: "hidden",
+          border: "none", minHeight: "100vh", background: "#163238" }}
+      >
         <Flex gap="large" align="center">
           {/* Formulario */}
           <div style={{ flex: 1 }}>
@@ -77,7 +85,7 @@ const Register = () => {
                   },
                 ]}
               >
-                <Input placeholder="Ingresa tu nombre completo" />
+                <Input placeholder="Ingresa tu nombre completo" style={{ borderRadius: 8, height: 40 }} />
               </Form.Item>
 
               <Form.Item
@@ -146,25 +154,34 @@ const Register = () => {
                 <Radio.Group
                   value={selectedRole}
                   onChange={(e) => setSelectedRole(e.target.value)}
+                  style={{ width: "100%" }}
                 >
                   <Space direction="vertical" style={{ width: "100%" }}>
-                    <Radio value="user">
+                    <Radio value="user" style={{ background: "#36565c", padding: "8px 12px", borderRadius: 8, width: "100%", border: "1px solid #36565c" }}>
                       <div>
                         <Typography.Text strong>Usuario</Typography.Text>
                         <Typography.Text
                           type="secondary"
-                          style={{ display: "block", marginLeft: 24, fontSize: 12 }}
+                          style={{
+                            display: "block",
+                            marginLeft: 24,
+                            fontSize: 12,
+                          }}
                         >
                           Acceso básico al sistema de veterinaria
                         </Typography.Text>
                       </div>
                     </Radio>
-                    <Radio value="admin">
+                    <Radio value="admin" style={{ background: "#36565c", padding: "8px 12px", borderRadius: 8, width: "100%", border: "1px solid #36565c" }}>
                       <div>
                         <Typography.Text strong>Administrador</Typography.Text>
                         <Typography.Text
                           type="secondary"
-                          style={{ display: "block", marginLeft: 24, fontSize: 12 }}
+                          style={{
+                            display: "block",
+                            marginLeft: 24,
+                            fontSize: 12,
+                          }}
                         >
                           Acceso completo y gestión del sistema
                         </Typography.Text>
@@ -209,9 +226,9 @@ const Register = () => {
           </div>
 
           {/* Imagen */}
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, }}>
             <img
-              src="https://i.pinimg.com/736x/1b/05/22/1b0522717946e80020a20906bd46160d.jpg"
+              src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
               alt="Registro"
               className="form-img-vertical"
             />
@@ -223,5 +240,3 @@ const Register = () => {
 };
 
 export default Register;
-
-

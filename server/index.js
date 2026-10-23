@@ -11,7 +11,7 @@ const notificationRoutes = require('./routes/notificationRoutes');
 const businessNotificationRoutes = require('./routes/businessNotificationRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes');
 const petRoutes = require('./routes/petRoutes');
-const metricsRoutes = require('./routes/metricsRoutes');
+const metricsRoutes = require('./routes/metricsRoute');
 const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();

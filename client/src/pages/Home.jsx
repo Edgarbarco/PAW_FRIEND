@@ -69,7 +69,7 @@ const Home = () => {
         <Col>
           <Space align="center">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhpMjyJ05ZBE5a095gwkuhCB9rPsgfrWc0igZpOQDFA&s=10"
               alt="logo"
               style={{ width: 36, height: 36 }}
             />
@@ -171,7 +171,7 @@ const Home = () => {
               }}
             >
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN4HJhnJo07reTM0Lta1HoTollHloqsqRUVw&s"
+                src="https://thumbs.dreamstime.com/b/perro-de-ocultaci%C3%B3n-del-ojo-de-la-cubierta-26906589.jpg?w=768"
                 alt="Veterinaria"
                 style={{
                   width: "100%",

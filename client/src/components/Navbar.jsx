@@ -94,7 +94,7 @@ const Navbar = () => {
           <Space align="center">
             <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
               <img
-                src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhpMjyJ05ZBE5a095gwkuhCB9rPsgfrWc0igZpOQDFA&s=10"
                 alt="logo"
                 style={{ width: 36, height: 36 }}
               />

@@ -4,22 +4,22 @@ describe('Appointment Validation - Pruebas Unitarias', () => {
     test('debe validar que la fecha no sea del pasado', () => {
       const today = new Date();
       const pastDate = new Date('2020-01-01');
-      const futureDate = new Date('2026-12-31');
+      const futureDate = new Date('2027-12-31');
       
       expect(futureDate > today).toBe(true);
       expect(pastDate < today).toBe(true);
     });
 
     test('debe validar formato de fecha', () => {
-      const validDate = '2025-12-25';
+      const validDate = '2026-12-25';
       const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
       
       expect(dateRegex.test(validDate)).toBe(true);
     });
 
     test('debe calcular duración entre fechas', () => {
-      const start = new Date('2025-10-24T10:00:00');
-      const end = new Date('2025-10-24T11:00:00');
+      const start = new Date('2026-10-24T10:00:00');
+      const end = new Date('2026-10-24T11:00:00');
       const durationMs = end - start;
       const durationHours = durationMs / (1000 * 60 * 60);
       
@@ -59,8 +59,7 @@ describe('Appointment Validation - Pruebas Unitarias', () => {
 
   describe('Estados de citas', () => {
     test('debe validar estados permitidos', () => {
-      const validStates = ['pendiente', 'confirmada', 'cancelada', 
-'completada'];
+      const validStates = ['pendiente', 'confirmada', 'cancelada', 'completada'];
       const testState = 'confirmada';
       
       expect(validStates).toContain(testState);

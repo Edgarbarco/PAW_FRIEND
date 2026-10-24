@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, Button, Divider, Badge } from 'antd';
+import { Menu, Badge } from 'antd';
 import {
   HomeOutlined,
   AppstoreOutlined,
@@ -8,8 +8,6 @@ import {
   HistoryOutlined,
   CalendarOutlined,
   PhoneOutlined,
-  LogoutOutlined,
-  HeartOutlined // <-- ¡Listo! Ya está importado correctamente aquí
 } from '@ant-design/icons';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -55,9 +53,6 @@ const Sidebar = () => {
     if (path.includes('/history')) return '4';
     if (path.includes('/agenda')) return '5';
     if (path.includes('/contacts')) return '6';
-    if (path.includes('/hospitalization')) return '7';
-    if (path.includes('/grooming')) return '8';
-    if (path.includes('/vaccination')) return '9';
     return '1'; // Dashboard
   };
 
@@ -96,21 +91,6 @@ const Sidebar = () => {
           Mensajes <Badge count={pendingCount} size="small" offset={[10, 0]} />
         </Link>
       ),
-    },
-    {
-      key: '7',
-      icon: <CalendarOutlined />,
-      label: <Link to="/dashboard/hospitalization">Hospitalización</Link>,
-    },
-    {
-      key: '8',
-      icon: <AppstoreOutlined />,
-      label: <Link to="/dashboard/grooming">Peluquería (Grooming)</Link>,
-    },
-    {
-      key: '9',
-      icon: <HeartOutlined />,
-      label: <Link to="/dashboard/vaccination">Carnet Vacunación</Link>,
     },
   ];
 
